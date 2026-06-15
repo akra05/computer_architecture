@@ -67,16 +67,16 @@ for:
 	add $t3, $a0,$t0	# $t3 wird als n-tes Zeichen initialisiert
 	lb $t3,0($t3)
 	
-	addi $t0,$t0,1		# Counter wird um 1 erhöht
+	addi $t0,$t0,1		# Counter wird um 1 erhÃ¶ht
 	
 	beq $t3,$zero,end_for	# if(char[t0]=='\n') beende
-	j is_digit		# else: Überprüfe ob $t3 eine Zahl ist
+	j is_digit		# else: ÃœberprÃ¼fe ob $t3 eine Zahl ist
 if:
-	addi $t1,$t1,1		#Counter bis 5 wird um 1 erhöht und es wird überprüft, ob der Counter bereits bei 5 ist
+	addi $t1,$t1,1		#Counter bis 5 wird um 1 erhÃ¶ht und es wird Ã¼berprÃ¼ft, ob der Counter bereits bei 5 ist
 	beq $t1,$t2,init_result
 	j for
 else:
-	li $t1,0	# Der Counter wird zurückgesetzt
+	li $t1,0	# Der Counter wird zurÃ¼ckgesetzt
 	j for
 end_for:
 	li $v0,0	#Abbruch wenn Ende der Zeichenkette erreicht wurde (0 weil es dann keine Postleitzahl gibt)
